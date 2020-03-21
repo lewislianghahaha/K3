@@ -35,10 +35,10 @@ namespace CloudPayApplyUpdate
                 }
 
                 //根据所获取的单号进行更新
-               // generate.UpdateK3Record("");
+                generate.UpdateK3Record(fidlist);
 
                 //输出
-                View.ShowMessage($"{fidlist}");
+                View.ShowMessage("已完成更新");
             }
         }
 
