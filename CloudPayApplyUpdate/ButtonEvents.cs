@@ -15,9 +15,10 @@ namespace CloudPayApplyUpdate
 
             //订单退回操作
             base.BarItemClick(e);
-
-            //付款申请单
-            if (e.BarItemKey=="tbPayApply")
+            //获取当前登录用户信息ID
+            var currUserId = this.Context.UserId;  
+            //付款申请单(注:只有当前用户是‘易建青’才可以使用)
+            if (e.BarItemKey=="tbPayApply" && currUserId== 680335)
             {
                 //获取列表上通过复选框勾选的记录
                 var selectedRows = this.ListView.SelectedRowsInfo;
